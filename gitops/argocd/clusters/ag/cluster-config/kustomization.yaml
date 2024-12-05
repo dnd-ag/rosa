@@ -2,7 +2,7 @@ namespace: openshift-gitops
 
 resources:
   - cluster-config-project.yaml
-  - ../../cluster-config/external-secrets-operator/operator
-  - ../../cluster-config/external-secrets-operator/instance
-  - ../../cluster-config/openshift-dns-operator
-  - ../../cluster-config/openshift-gitops-operator
+  - ../../../cluster-config/external-secrets-operator/operator
+  - ../../../cluster-config/external-secrets-operator/instance
+  - ../../../cluster-config/openshift-dns-operator
+  - ../../../cluster-config/openshift-gitops-operator
