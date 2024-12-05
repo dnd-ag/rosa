@@ -1,3 +1,5 @@
+namespace: openshift-gitops
+
 resources:
   - cluster-config-project.yaml
   - ../../cluster-config/external-secrets-operator/operator
