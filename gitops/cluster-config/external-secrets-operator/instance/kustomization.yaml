@@ -1,0 +1,7 @@
+namespace: external-secrets
+
+resources:
+  - namespace.yaml
+  - default-operatorconfig.yaml
+  - cluster-secret-store.yaml
+  - serviceaccount.yaml

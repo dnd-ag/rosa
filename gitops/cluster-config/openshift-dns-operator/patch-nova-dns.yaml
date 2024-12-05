@@ -1,0 +1,14 @@
+apiVersion: operator.openshift.io/v1
+kind: DNS
+metadata:
+  name: default
+spec:
+  servers:
+    - name: nova
+      zones:
+        - nova.local
+      forwardPlugin:
+        policy: RoundRobin
+        upstreams:
+          - 172.27.154.62 # Nova DC 1 (primary)
+          - 172.27.152.189 # Nova DC 2 (secondary)

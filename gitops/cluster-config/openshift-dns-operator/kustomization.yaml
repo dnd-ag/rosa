@@ -1,0 +1,4 @@
+resources:
+  - default-dns-operator.yaml
+patchesStrategicMerge:
+  - patch-nova-dns.yaml

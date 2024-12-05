@@ -1,0 +1,2 @@
+resources:
+  - default-dns-operator-application.yaml
