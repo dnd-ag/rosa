@@ -1,2 +1,2 @@
 resources:
-  - ../gitops/cluster-config/openshift-gitops-operator
+  - ../../gitops/cluster-config/openshift-gitops-operator
