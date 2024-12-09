@@ -3,7 +3,6 @@ kind: DNS
 metadata:
   finalizers:
   - dns.operator.openshift.io/dns-controller
-  generation: 1
   name: default
 spec:
   cache:
