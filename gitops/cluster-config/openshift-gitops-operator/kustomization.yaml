@@ -1,4 +1,4 @@
 resources:
   - namespace.yaml
-  - https://github.com/redhat-cop/gitops-catalog/openshift-gitops-operator/operator/overlays/gitops-1.13?ref=main
+  - github.com/redhat-cop/gitops-catalog/openshift-gitops-operator/operator/overlays/gitops-1.13?ref=main
   - openshift-gitops-extended-clusterrolebinding.yaml
