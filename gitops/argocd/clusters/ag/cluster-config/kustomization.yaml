@@ -6,3 +6,4 @@ resources:
   - ../../../cluster-config/external-secrets-operator/instance
   - ../../../cluster-config/openshift-dns-operator
   - ../../../cluster-config/openshift-gitops-operator
+  - ../../../cluster-config/openshift-ingress-operator
