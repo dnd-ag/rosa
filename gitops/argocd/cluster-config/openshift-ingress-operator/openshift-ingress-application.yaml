@@ -4,16 +4,15 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "101"
   labels:
-    gitops.ownedBy: openshift-gitops
-    app.type: operator-instance
-  name: openshift-gitops-cluster
+    gitops.ownedBy: openshift-ingress-operator
+  name: openshift-ingress-cluster
 spec:
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: gitops/cluster-config/openshift-gitops-operator
+    path: gitops/cluster-config/openshift-ingress-operator
     repoURL: https://github.com/dnd-ag/rosa.git
     targetRevision: main
   syncPolicy:
