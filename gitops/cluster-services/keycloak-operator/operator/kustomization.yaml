@@ -1,0 +1,2 @@
+resources:
+  - github.com/redhat-cop/gitops-catalog/redhat-keycloak/operator/overlays/stable-v26?ref=main
