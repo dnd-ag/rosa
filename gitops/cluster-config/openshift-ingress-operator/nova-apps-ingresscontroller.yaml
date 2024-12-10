@@ -13,7 +13,7 @@ spec:
       name: ""
     clientCertificatePolicy: ""
   defaultCertificate:
-    name: apps-nova-tls
+    name: nova-apps-tls
   domain: apps.nova.local
   endpointPublishingStrategy:
     loadBalancer:
