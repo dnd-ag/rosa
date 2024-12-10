@@ -7,5 +7,5 @@ spec:
   channel: stable-v1
   installPlanApproval: Automatic
   name: cloudnative-pg
-  source: redhat-operators
+  source: certified-operators
   sourceNamespace: openshift-marketplace
