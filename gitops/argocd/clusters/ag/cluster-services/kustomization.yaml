@@ -1,0 +1,5 @@
+namespace: openshift-gitops
+
+resources:
+  - cluster-services-project.yaml
+  - ../../../cluster-services/cloudnative-pg-operator
