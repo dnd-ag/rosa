@@ -1,7 +1,10 @@
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
+namespace: external-secrets
+
 resources:
+  - namespace.yaml
   - serviceaccount.yaml
   - github.com/redhat-cop/gitops-catalog/external-secrets-operator/operator/overlays/alpha
   - github.com/redhat-cop/gitops-catalog/external-secrets-operator/instance/overlays/default
