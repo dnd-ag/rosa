@@ -8,6 +8,10 @@ spec:
     name: nova-apps-tls
   domain: apps.nova.local
   replicas: 1
+  logging:
+    access:
+      destination:
+        type: Container
   endpointPublishingStrategy:
     type: LoadBalancerService
     loadBalancer:
