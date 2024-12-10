@@ -29,6 +29,8 @@ spec:
   httpEmptyRequestsPolicy: Respond
   httpErrorCodePages:
     name: ""
+  namespaceSelector:
+    matchExpressions: []
   nodePlacement:
     nodeSelector:
       matchLabels:
@@ -37,7 +39,11 @@ spec:
     - effect: NoSchedule
       key: node-role.kubernetes.io/infra
       operator: Exists
-  replicas: 2
+  routeAdmission:
+    namespaceOwnership: Strict
+    wildcardPolicy: WildcardsDisallowed
+  routeSelector:
+    matchExpressions: []
   tuningOptions:
     reloadInterval: 0s
   unsupportedConfigOverrides: null
