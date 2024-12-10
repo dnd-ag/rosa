@@ -21,6 +21,7 @@ spec:
       providerParameters:
         aws:
           type: NLB
+          networkLoadBalancer: {}
         type: AWS
       scope: Internal
     type: LoadBalancerService
@@ -28,5 +29,7 @@ spec:
   httpEmptyRequestsPolicy: Respond
   httpErrorCodePages:
     name: ""
-  namespaceSelector:
-    matchExpressions: []
+  replicas: 2
+  tuningOptions:
+    reloadInterval: 0s
+  unsupportedConfigOverrides: null
