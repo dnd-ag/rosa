@@ -10,9 +10,9 @@ spec:
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
-  project: cluster-config
+  project: cluster-services
   source:
-    path: gitops/cluster-config/cloudnative-pg-operator
+    path: gitops/cluster-services/cloudnative-pg-operator
     repoURL: https://github.com/dnd-ag/rosa.git
     targetRevision: main
   syncPolicy:
