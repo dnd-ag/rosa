@@ -6,4 +6,5 @@ resources:
   - ../../../cluster-config/openshift-gitops-operator
   - ../../../cluster-config/openshift-dns-operator
   - ../../../cluster-config/openshift-ingress-operator
-  - ../../../cluster-config/rhbk-operator
+  - ../../../cluster-config/rhbk-operator/operator
+  - ../../../cluster-config/rhbk-operator/instance
