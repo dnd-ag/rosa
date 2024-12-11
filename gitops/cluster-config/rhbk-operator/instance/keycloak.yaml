@@ -13,6 +13,8 @@ spec:
     passwordSecret:
       name: keycloak-db-creds
       key: password
+  ingress:
+    className: openshift-nova-apps
   http:
     tlsSecret: nova-id-tls
   hostname:
