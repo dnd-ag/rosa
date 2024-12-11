@@ -15,7 +15,7 @@ spec:
       key: password
   ingress:
     # enabled: false
-    className: openshift-nova-apps
+    className: openshift-default
   http:
     tlsSecret: nova-id-tls
   hostname:
