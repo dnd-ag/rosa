@@ -13,9 +13,8 @@ spec:
     passwordSecret:
       name: keycloak-db-creds
       key: password
-  ingress:
-    # enabled: false
-    className: openshift-default
+  # ingress:
+  #   className: openshift-default
   http:
     tlsSecret: nova-id-tls
   hostname:
