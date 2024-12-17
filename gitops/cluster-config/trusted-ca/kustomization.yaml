@@ -1,5 +1,5 @@
 resources:
-  - nova-root-ca-externalsecret.yaml
+  # - nova-root-ca-externalsecret.yaml
   - cluster-image.yaml
 
 patchesStrategicMerge:

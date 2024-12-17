@@ -3,5 +3,6 @@ kind: Image
 metadata:
   name: cluster
 spec:
-  additionalTrustedCA:
-    name: nova-root-ca
+  registrySources: 
+    insecureRegistries: 
+    - quay.nova.local
