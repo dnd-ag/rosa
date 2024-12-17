@@ -1,3 +1,4 @@
 resources:
   - cluster-config
   - cluster-services
+  - cluster-apps
