@@ -1,6 +1,5 @@
 resources:
-  - patch-image.yaml
-
-patchesStrategicMerge:
   - nova-root-ca-externalsecret.yaml
+
+patches:
   - patch-image.yaml
