@@ -19,11 +19,25 @@ spec:
           image: quay.nova.local/iss/wikijs:2.5.304
           ports:
             - containerPort: 3000
+          env:
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: nova-wiki-db-creds
+                  key: database
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: nova-wiki-db-creds
+                  key: username
+            - name: DB_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: nova-wiki-db-creds
+                  key: password
           envFrom:
             - configMapRef:
                 name: wikijs-app
-            - secretRef:
-                name: nova-wiki-db-creds
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
