@@ -1,4 +1,4 @@
-namespace: cert-manager-operator
+namespace: cert-manager
 
 resources:
   - ca-tls-externalsecret.yaml
