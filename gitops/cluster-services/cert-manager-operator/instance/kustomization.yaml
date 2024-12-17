@@ -1,3 +1,5 @@
+namespace: cert-manager-operator
+
 resources:
   - ca-tls-externalsecret.yaml
   - clusterissuer.yaml
