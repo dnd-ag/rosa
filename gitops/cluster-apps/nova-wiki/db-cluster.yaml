@@ -1,0 +1,18 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: nova-wiki-db
+  labels:
+    app.kubernetes.io/part-of: nova-wiki
+spec:
+  instances: 1
+
+  bootstrap:
+    initdb:
+      database: wiki
+      owner: wiki
+      secret:
+        name: nova-wiki-db-creds
+
+  storage:
+    size: 500Mi

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nova-wiki-app
+  labels:
+    app.kubernetes.io/part-of: nova-wiki
+spec:
+  replicas: 1
+  selector: 
+    matchLabels: 
+      deployment: nova-wiki-app
+  template:
+    metadata:
+      labels: 
+        deployment: nova-wiki-app
+    spec:
+      containers:
+        - name: nova-wiki-app
+          image: quay.nova.local/iss/wikijs:2.5.304
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: wikijs-app
+            - secretRef:
+                name: nova-wiki-db-creds
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+                drop: ["ALL"]
+            runAsNonRoot: true
+            seccompProfile: 
+              type: RuntimeDefault

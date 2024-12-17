@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: "Nova Lab wiki"
+    openshift.io/display-name: "Nova Lab Wiki"
+  name: nova-wiki
