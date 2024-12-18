@@ -19,6 +19,10 @@ spec:
           image: quay.nova.local/iss/wikijs:2.5.304
           ports:
             - containerPort: 3000
+          volumeMounts:
+            - name: nova-ca-volume
+              mountPath: /etc/ssl/certs/nova-root-ca.crt
+              subPath: nova-root-ca.crt
           env:
             - name: DB_NAME
               valueFrom:
@@ -35,6 +39,8 @@ spec:
                 secretKeyRef:
                   name: nova-wiki-db-creds
                   key: password
+            - name: NODE_EXTRA_CA_CERTS
+              value: /etc/ssl/certs/nova-root-ca.crt
           envFrom:
             - configMapRef:
                 name: nova-wiki-app
@@ -45,3 +51,7 @@ spec:
             runAsNonRoot: true
             seccompProfile: 
               type: RuntimeDefault
+      volumes:
+        - name: nova-ca-volume
+          configMap:
+            name: nova-wiki-app
