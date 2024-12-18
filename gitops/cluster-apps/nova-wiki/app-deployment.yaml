@@ -37,7 +37,7 @@ spec:
                   key: password
           envFrom:
             - configMapRef:
-                name: wikijs-app
+                name: nova-wiki-app
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
