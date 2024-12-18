@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/part-of: nova-wiki
 spec:
-  instances: 1
+  instances: 2
 
   bootstrap:
     initdb:
