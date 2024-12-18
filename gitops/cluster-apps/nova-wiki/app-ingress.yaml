@@ -5,7 +5,6 @@ metadata:
     cert-manager.io/cluster-issuer: nova-ca
   name: nova-wiki-app
 spec:
-  ingressClassName: openshift-nova-apps
   rules:
   - host: wiki.nova.local
     http:
