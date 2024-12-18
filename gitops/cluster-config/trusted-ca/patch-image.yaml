@@ -3,6 +3,8 @@ kind: Image
 metadata:
   name: cluster
 spec:
+  additionalTrustedCA:
+    name: nova-quay-tls
   registrySources: 
     insecureRegistries:
     - quay.nova.local
