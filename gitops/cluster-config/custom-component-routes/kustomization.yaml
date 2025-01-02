@@ -1,3 +1,4 @@
+namespace: openshift-config
 resources:
   - console-tls-externalsecret.yaml
   - downloads-tls-externalsecret.yaml
