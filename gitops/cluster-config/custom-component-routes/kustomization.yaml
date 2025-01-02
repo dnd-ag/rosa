@@ -1,0 +1,4 @@
+resources:
+  - console-tls-externalsecret.yaml
+  - downloads-tls-externalsecret.yaml
+  - oauth-tls-externalsecret.yaml

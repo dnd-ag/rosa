@@ -10,3 +10,4 @@ resources:
   - ../../../cluster-config/rhbk-operator/instance
   - ../../../cluster-config/trusted-ca
   - ../../../cluster-config/cluster-proxy
+  - ../../../cluster-config/custom-component-routes
