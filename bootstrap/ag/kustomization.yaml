@@ -1,2 +1,2 @@
 resources:
-  - ../../gitops/argocd/clusters/ag/bootstrap
+  - ../../gitops/argocd/clusters/core/bootstrap
