@@ -1,0 +1,15 @@
+namespace: cert-manager
+
+resources:
+  - ../../base
+
+patches:
+- patch: |-
+    apiVersion: external-secrets.io/v1beta1
+    kind: ExternalSecret
+    metadata:
+      name: nova-ca-tls
+    spec:
+      dataFrom:
+        - extract:
+            key: rosa-ag/services/cert-manager/nova-ca-tls
