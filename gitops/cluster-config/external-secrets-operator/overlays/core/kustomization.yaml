@@ -1,0 +1,5 @@
+namespace: external-secrets
+
+resources:
+  - ../..
+  - serviceaccount.yaml

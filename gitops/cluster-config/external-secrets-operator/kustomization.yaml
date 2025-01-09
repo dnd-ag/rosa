@@ -6,5 +6,4 @@ namespace: external-secrets
 resources:
   - github.com/redhat-cop/gitops-catalog/external-secrets-operator/operator/overlays/alpha
   - github.com/redhat-cop/gitops-catalog/external-secrets-operator/instance/overlays/default
-  - serviceaccount.yaml
   - cluster-secret-store.yaml
