@@ -1,0 +1,7 @@
+namespace: openshift-gitops
+
+resources:
+  - cluster-services-project.yaml
+  - ../../../cluster-services/cert-manager-operator/operator
+  - ../../../cluster-services/cert-manager-operator/instance
+  # - ../../../cluster-services/cloudnative-pg-operator
