@@ -7,5 +7,5 @@ resources:
   - ../../../cluster-config/openshift-dns-operator
   - ../../../cluster-config/cluster-proxy
   - ../../../cluster-config/openshift-ingress-operator/overlays/core
-  # - ../../../cluster-config/trusted-ca
   # - ../../../cluster-config/custom-component-routes
+  # - ../../../cluster-config/trusted-ca

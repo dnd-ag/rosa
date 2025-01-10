@@ -1,0 +1,3 @@
+resources:
+  - console-certificate.yaml
+  - cluster-ingress.yaml
