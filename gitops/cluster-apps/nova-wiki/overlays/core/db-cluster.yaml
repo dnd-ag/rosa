@@ -16,14 +16,14 @@ spec:
 
   bootstrap:
     recovery:
-      source: nova-wiki-db
+      source: nova-wiki-db-original
       database: wiki
       owner: wiki
       secret:
         name: nova-wiki-db-creds
 
   externalClusters:
-    - name: nova-wiki-db
+    - name: nova-wiki-db-original
       barmanObjectStore:
         destinationPath: s3://rosa-nova-core/cnpg/backups/
         s3Credentials:
