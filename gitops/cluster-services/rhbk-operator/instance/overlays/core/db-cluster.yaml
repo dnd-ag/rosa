@@ -14,14 +14,14 @@ spec:
 
   bootstrap:
     recovery:
-      source: keycloak
+      source: keycloak-nova
       database: keycloak
       owner: keycloak
       secret:
         name: keycloak-nova-db-creds
 
   externalClusters:
-    - name: keycloak
+    - name: keycloak-nova
       barmanObjectStore:
         destinationPath: s3://rosa-nova-core/cnpg/backups/
         s3Credentials:
