@@ -3,7 +3,7 @@ kind: Cluster
 metadata:
   name: keycloak-nova
 spec:
-  instances: 3
+  instances: 1
 
   imageName: ghcr.io/cloudnative-pg/postgresql:17.0
 
@@ -18,7 +18,7 @@ spec:
   externalClusters:
     - name: keycloak
       barmanObjectStore:
-        destinationPath: s3://ag1-dump/By Project/ROSA/ag/backups/cnpg
+        destinationPath: s3://rosa-nova-core/cnpg/backups/
         s3Credentials:
           accessKeyId:
             name: aws-creds
