@@ -5,14 +5,14 @@ metadata:
     argocd.argoproj.io/sync-wave: "101"
   labels:
     gitops.ownedBy: keycloak
-  name: rhbk-operator
+  name: rhbk-instance-nova
 spec:
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
-  project: cluster-config
+  project: cluster-services
   source:
-    path: gitops/cluster-config/rhbk-operator/operator
+    path: gitops/cluster-services/rhbk-operator/instance
     repoURL: https://github.com/dnd-ag/rosa.git
     targetRevision: main
   syncPolicy:
