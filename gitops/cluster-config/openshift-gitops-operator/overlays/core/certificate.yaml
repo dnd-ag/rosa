@@ -2,6 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: nova-argocd
+  namespace: openshift-gitops
 spec:
   secretName: argocd-os-nova-local-tls
 
