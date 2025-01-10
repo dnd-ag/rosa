@@ -4,4 +4,4 @@ resources:
   - cluster-services-project.yaml
   - ../../../cluster-services/cert-manager-operator/operator
   - ../../../cluster-services/cert-manager-operator/instance/overlays/core
-  # - ../../../cluster-services/cloudnative-pg-operator
+  - ../../../cluster-services/cloudnative-pg-operator
