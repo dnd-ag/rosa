@@ -3,5 +3,5 @@ namespace: keycloak
 resources:
   - db-creds-externalsecret.yaml
   - db-cluster.yaml
-  # - nova-id-tls-externalsecret.yaml
-  # - keycloak.yaml
+  - certificate.yaml
+  - keycloak.yaml

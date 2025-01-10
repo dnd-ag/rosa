@@ -3,19 +3,17 @@ kind: Keycloak
 metadata:
   name: nova
 spec:
-  instances: 2
+  instances: 1
   db:
     vendor: postgres
-    host: keycloak-rw
+    host: keycloak-nova-rw
     usernameSecret:
-      name: keycloak-db-creds
+      name: keycloak-nova-db-creds
       key: username
     passwordSecret:
-      name: keycloak-db-creds
+      name: keycloak-nova-db-creds
       key: password
-  # ingress:
-  #   className: openshift-default
   http:
-    tlsSecret: nova-id-tls
+    tlsSecret: id-nova-local-tls
   hostname:
     hostname: id.nova.local
