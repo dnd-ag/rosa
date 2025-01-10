@@ -3,9 +3,14 @@ kind: Cluster
 metadata:
   name: keycloak-nova
 spec:
-  instances: 1
+  instances: 2
 
   imageName: ghcr.io/cloudnative-pg/postgresql:17.0
+
+  serviceAccountTemplate:
+    metadata:
+      annotations:
+        eks.amazonaws.com/role-arn: arn:aws:iam::248503644949:role/rosa-nova-core-cnpg
 
   bootstrap:
     recovery:
@@ -20,17 +25,15 @@ spec:
       barmanObjectStore:
         destinationPath: s3://rosa-nova-core/cnpg/backups/
         s3Credentials:
-          accessKeyId:
-            name: aws-creds
-            key: ACCESS_KEY_ID
-          secretAccessKey:
-            name: aws-creds
-            key: ACCESS_SECRET_KEY
-          sessionToken:
-            name: aws-creds
-            key: ACCESS_SESSION_TOKEN
+          inheritFromIAMRole: true
         wal:
           maxParallel: 8
+
+  backup:
+    barmanObjectStore:
+      destinationPath: s3://rosa-nova-core/cnpg/backups/
+      s3Credentials:
+        inheritFromIAMRole: true
 
   storage:
     size: 1Gi

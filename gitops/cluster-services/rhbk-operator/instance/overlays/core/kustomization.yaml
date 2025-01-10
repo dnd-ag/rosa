@@ -3,5 +3,6 @@ namespace: keycloak
 resources:
   - db-creds-externalsecret.yaml
   - db-cluster.yaml
+  - db-scheduledbackup.yaml
   - certificate.yaml
   - keycloak.yaml
