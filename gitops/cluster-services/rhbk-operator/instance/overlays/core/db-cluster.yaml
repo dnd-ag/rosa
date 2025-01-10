@@ -7,24 +7,26 @@ spec:
 
   bootstrap:
     recovery:
-      source: 
-    initdb:
+      source: keycloak
       database: keycloak
       owner: keycloak
       secret:
-        name: keycloak-db-creds
+        name: keycloak-nova-db-creds
 
   externalClusters:
-    - name: clusterBackup
+    - name: keycloak
       barmanObjectStore:
-        destinationPath: 
-        azureCredentials:
-          storageAccount:
-            name: recovery-object-store-secret
-            key: storage_account_name
-          storageKey:
-            name: recovery-object-store-secret
-            key: storage_account_key
+        destinationPath: s3://ag1-dump/By Project/ROSA/ag/backups/cnpg
+        s3Credentials:
+          accessKeyId:
+            name: aws-creds
+            key: ACCESS_KEY_ID
+          secretAccessKey:
+            name: aws-creds
+            key: ACCESS_SECRET_KEY
+          sessionToken:
+            name: aws-creds
+            key: ACCESS_SESSION_TOKEN
         wal:
           maxParallel: 8
 
