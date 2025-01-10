@@ -9,6 +9,7 @@ patches:
     kind: Application
     metadata:
       name: rhbk-instance-nova
+      finalizers: null
     spec:
       source:
         path:
