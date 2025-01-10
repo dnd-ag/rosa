@@ -1,0 +1,32 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: keycloak-nova
+spec:
+  instances: 3
+
+  bootstrap:
+    recovery:
+      source: 
+    initdb:
+      database: keycloak
+      owner: keycloak
+      secret:
+        name: keycloak-db-creds
+
+  externalClusters:
+    - name: clusterBackup
+      barmanObjectStore:
+        destinationPath: 
+        azureCredentials:
+          storageAccount:
+            name: recovery-object-store-secret
+            key: storage_account_name
+          storageKey:
+            name: recovery-object-store-secret
+            key: storage_account_key
+        wal:
+          maxParallel: 8
+
+  storage:
+    size: 1Gi

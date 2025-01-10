@@ -12,7 +12,7 @@ patches:
     spec:
       source:
         path:
-          gitops/cluster-services/rhbk-operator/instance/overlays/ag
+          gitops/cluster-services/rhbk-operator/instance/overlays/core
       syncPolicy:
         automated:
           prune: false
