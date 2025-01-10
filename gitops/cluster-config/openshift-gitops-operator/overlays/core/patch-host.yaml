@@ -4,4 +4,9 @@ metadata:
   name: openshift-gitops
 spec:
   server:
-    host: argocd.apps.os.nova.local
+    host: argocd.os.nova.local
+    route:
+      enabled: true
+      tls:
+        externalCertificate:
+          name: argocd-os-nova-local-tls

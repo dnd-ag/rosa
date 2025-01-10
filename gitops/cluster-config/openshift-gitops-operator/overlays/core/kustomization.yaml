@@ -1,5 +1,8 @@
+namespace: openshift-gitops
+
 resources:
   - ../../base
+  - certificate.yaml
 
 patches:
   - path: patch-host.yaml
