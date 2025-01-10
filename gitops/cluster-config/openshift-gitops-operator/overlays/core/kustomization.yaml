@@ -1,0 +1,7 @@
+resources:
+  - ../../base
+
+patches:
+  - path: patch-host.yaml
+    target:
+      kind: ArgoCD
