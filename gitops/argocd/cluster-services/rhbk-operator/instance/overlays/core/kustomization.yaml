@@ -13,7 +13,3 @@ patches:
       source:
         path:
           gitops/cluster-services/rhbk-operator/instance/overlays/core
-      syncPolicy:
-        automated:
-          prune: false
-          selfHeal: false

@@ -6,3 +6,4 @@ resources:
   - ../../../cluster-services/cert-manager-operator/instance/overlays/core
   - ../../../cluster-services/cloudnative-pg-operator
   - ../../../cluster-services/rhbk-operator/operator
+  - ../../../cluster-services/rhbk-operator/instance/overlays/core
