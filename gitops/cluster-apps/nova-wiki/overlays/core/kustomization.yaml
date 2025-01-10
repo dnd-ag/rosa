@@ -1,0 +1,39 @@
+namespace: nova-wiki
+
+resources:
+  - ../../base/namespace.yaml
+  # - ../../base/db-creds-externalsecret.yaml
+  # - ../../base/db-cluster.yaml
+  # - ../../base/app-configmap.yaml
+  # - ../../base/app-deployment.yaml
+  # - ../../base/app-service.yaml
+  # - ../../base/app-ingress.yaml
+  
+
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: nova-wiki-app
+      spec:
+        replicas: 0
+  # - patch: |-
+  #     apiVersion: postgresql.cnpg.io/v1
+  #     kind: Cluster
+  #     metadata:
+  #       name: nova-wiki-db
+  #     spec:
+  #       backup:
+  #         barmanObjectStore:
+  #           destinationPath: s3://rosa-nova-core/cnpg/backups/
+  #           s3Credentials:
+  #             accessKeyId:
+  #               key: ACCESS_KEY_ID
+  #               name: aws-creds
+  #             secretAccessKey:
+  #               key: ACCESS_SECRET_KEY
+  #               name: aws-creds
+  #             sessionToken:
+  #               key: ACCESS_SESSION_TOKEN
+  #               name: aws-creds

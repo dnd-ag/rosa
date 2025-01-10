@@ -1,0 +1,5 @@
+namespace: openshift-gitops
+
+resources:
+  - cluster-apps-project.yaml
+  - ../../../cluster-apps/nova-wiki/overlays/core
