@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nova-wiki-app
+  labels:
+    app.kubernetes.io/part-of: nova-wiki
+spec:
+  ports:
+    - name: 3000-tcp
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+  selector:
+    deployment: nova-wiki-app

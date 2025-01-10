@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nova-wiki-app
+  labels:
+    app.kubernetes.io/part-of: nova-wiki
+spec:
+  replicas: 1
+  selector: 
+    matchLabels: 
+      deployment: nova-wiki-app
+  template:
+    metadata:
+      labels: 
+        deployment: nova-wiki-app
+    spec:
+      containers:
+        - name: nova-wiki-app
+          image: quay.nova.local/iss/wikijs:2.5.304
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: nova-ca-volume
+              mountPath: /etc/ssl/certs/nova-root-ca.crt
+              subPath: nova-root-ca.crt
+          env:
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: nova-wiki-db-creds
+                  key: database
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: nova-wiki-db-creds
+                  key: username
+            - name: DB_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: nova-wiki-db-creds
+                  key: password
+            - name: NODE_EXTRA_CA_CERTS
+              value: /etc/ssl/certs/nova-root-ca.crt
+          envFrom:
+            - configMapRef:
+                name: nova-wiki-app
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+                drop: ["ALL"]
+            runAsNonRoot: true
+            seccompProfile: 
+              type: RuntimeDefault
+      volumes:
+        - name: nova-ca-volume
+          configMap:
+            name: nova-wiki-app

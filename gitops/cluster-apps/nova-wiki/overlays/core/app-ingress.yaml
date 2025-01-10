@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: nova-ca
+  name: nova-wiki-app
+spec:
+  rules:
+  - host: wiki.nova.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: nova-wiki-app
+            port:
+              name: 3000-tcp
+  tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
+  - hosts:
+    - wiki.nova.local
+    secretName: nova-wiki-app-cert # < cert-manager will store the created certificate in this secret.
