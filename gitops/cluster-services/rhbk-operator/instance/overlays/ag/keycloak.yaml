@@ -3,7 +3,7 @@ kind: Keycloak
 metadata:
   name: nova
 spec:
-  instances: 2
+  instances: 0
   db:
     vendor: postgres
     host: keycloak-rw
