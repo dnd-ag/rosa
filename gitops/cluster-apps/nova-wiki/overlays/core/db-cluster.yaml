@@ -7,26 +7,30 @@ metadata:
 spec:
   instances: 1
 
-  backup:
-    barmanObjectStore:
-      destinationPath: s3://rosa-nova-core/cnpg/backups/
-      s3Credentials:
-        accessKeyId:
-          key: ACCESS_KEY_ID
-          name: aws-creds
-        secretAccessKey:
-          key: ACCESS_SECRET_KEY
-          name: aws-creds
-        sessionToken:
-          key: ACCESS_SESSION_TOKEN
-          name: aws-creds
-
   bootstrap:
-    initdb:
+    recovery:
+      source: nova-wiki-db
       database: wiki
       owner: wiki
       secret:
         name: nova-wiki-db-creds
+
+  externalClusters:
+    - name: nova-wiki-db
+      barmanObjectStore:
+        destinationPath: s3://rosa-nova-core/cnpg/backups/
+        s3Credentials:
+          accessKeyId:
+            name: aws-creds
+            key: ACCESS_KEY_ID
+          secretAccessKey:
+            name: aws-creds
+            key: ACCESS_SECRET_KEY
+          sessionToken:
+            name: aws-creds
+            key: ACCESS_SESSION_TOKEN
+        wal:
+          maxParallel: 8
 
   storage:
     size: 500Mi

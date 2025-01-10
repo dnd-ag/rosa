@@ -2,8 +2,8 @@ namespace: nova-wiki
 
 resources:
   - namespace.yaml
-  # - db-creds-externalsecret.yaml
-  # - db-cluster.yaml
+  - db-creds-externalsecret.yaml
+  - db-cluster.yaml
   # - app-configmap.yaml
   # - app-deployment.yaml
   # - app-service.yaml
