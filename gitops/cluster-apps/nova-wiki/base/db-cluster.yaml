@@ -5,7 +5,21 @@ metadata:
   labels:
     app.kubernetes.io/part-of: nova-wiki
 spec:
-  instances: 2
+  instances: 1
+
+  backup:
+    barmanObjectStore:
+      destinationPath: s3://rosa-nova-core/cnpg/backups/
+      s3Credentials:
+        accessKeyId:
+          key: ACCESS_KEY_ID
+          name: aws-creds
+        secretAccessKey:
+          key: ACCESS_SECRET_KEY
+          name: aws-creds
+        sessionToken:
+          key: ACCESS_SESSION_TOKEN
+          name: aws-creds
 
   bootstrap:
     initdb:
