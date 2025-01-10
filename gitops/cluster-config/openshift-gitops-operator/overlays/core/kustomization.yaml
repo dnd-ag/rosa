@@ -6,3 +6,4 @@ patches:
   - path: patch-host.yaml
     target:
       kind: ArgoCD
+      namespace: openshift-gitops
