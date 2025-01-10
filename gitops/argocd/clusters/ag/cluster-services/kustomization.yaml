@@ -6,4 +6,4 @@ resources:
   - ../../../cluster-services/cert-manager-operator/operator
   - ../../../cluster-services/cert-manager-operator/instance/overlays/ag
   - ../../../cluster-services/rhbk-operator/operator
-  - ../../../cluster-services/rhbk-operator/instance
+  - ../../../cluster-services/rhbk-operator/instance/overlays/ag
