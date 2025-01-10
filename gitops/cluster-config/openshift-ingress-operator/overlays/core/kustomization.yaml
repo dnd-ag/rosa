@@ -1,0 +1,3 @@
+resources:
+  - ../../base
+  - nova-apps-certificate.yaml

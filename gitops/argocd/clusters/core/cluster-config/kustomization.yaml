@@ -6,6 +6,6 @@ resources:
   - ../../../cluster-config/external-secrets-operator/overlays/core
   - ../../../cluster-config/openshift-dns-operator
   - ../../../cluster-config/cluster-proxy
-  # - ../../../cluster-config/openshift-ingress-operator
+  - ../../../cluster-config/openshift-ingress-operator/overlays/core
   # - ../../../cluster-config/trusted-ca
   # - ../../../cluster-config/custom-component-routes

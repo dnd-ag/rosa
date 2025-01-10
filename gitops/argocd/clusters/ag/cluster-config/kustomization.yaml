@@ -5,7 +5,7 @@ resources:
   - ../../../cluster-config/external-secrets-operator/overlays/ag
   - ../../../cluster-config/openshift-gitops-operator
   - ../../../cluster-config/openshift-dns-operator
-  - ../../../cluster-config/openshift-ingress-operator
+  - ../../../cluster-config/openshift-ingress-operator/overlays/ag
   - ../../../cluster-config/trusted-ca
   - ../../../cluster-config/cluster-proxy
   - ../../../cluster-config/custom-component-routes

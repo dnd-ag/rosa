@@ -1,3 +1,2 @@
 resources:
-  - nova-apps-tls-externalsecret.yaml
   - nova-apps-ingresscontroller.yaml
