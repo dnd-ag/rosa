@@ -10,4 +10,7 @@ patches:
     metadata:
       name: rhbk-instance-nova
     spec:
-      syncPolicy: {}
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: false
