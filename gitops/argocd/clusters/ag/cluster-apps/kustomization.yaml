@@ -2,4 +2,4 @@ namespace: openshift-gitops
 
 resources:
   - cluster-apps-project.yaml
-  - ../../../cluster-apps/nova-wiki
+  - ../../../cluster-apps/nova-wiki/overlays/ag
