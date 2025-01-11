@@ -1,4 +1,0 @@
-namespace: openshift-gitops
-
-resources:
-  - cluster-apps-project.yaml

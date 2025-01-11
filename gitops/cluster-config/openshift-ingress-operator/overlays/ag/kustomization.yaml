@@ -1,3 +1,0 @@
-resources:
-  - ../../base
-  - nova-apps-tls-externalsecret.yaml
