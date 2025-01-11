@@ -1,9 +1,3 @@
 resources:
   - ../../base
   - certificate.yaml
-
-patches:
-  - path: patch-host.yaml
-    target:
-      kind: ArgoCD
-      namespace: openshift-gitops

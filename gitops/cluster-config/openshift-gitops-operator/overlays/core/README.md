@@ -1,0 +1,1 @@
+Apply the patch manually to the `ArgoCD` resource created by the operator.
