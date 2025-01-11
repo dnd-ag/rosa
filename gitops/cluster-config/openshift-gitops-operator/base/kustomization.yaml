@@ -2,3 +2,9 @@ resources:
   - namespace.yaml
   - github.com/redhat-cop/gitops-catalog/openshift-gitops-operator/operator/overlays/gitops-1.13?ref=main
   - openshift-gitops-extended-clusterrolebinding.yaml
+
+patches:
+  - target:
+      kind: Subscription
+      name: openshift-gitops-operator
+    path: patch-subscription.yaml
