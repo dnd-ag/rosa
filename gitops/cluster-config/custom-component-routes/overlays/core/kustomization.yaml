@@ -1,3 +1,5 @@
 resources:
   - console-certificate.yaml
   - cluster-ingress.yaml
+  - custom-console-logo-configmap.yaml
+  - cluster-console.yaml

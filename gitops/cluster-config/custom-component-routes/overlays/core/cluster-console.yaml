@@ -1,0 +1,10 @@
+apiVersion: operator.openshift.io/v1
+kind: Console
+metadata:
+  name: cluster
+spec:
+  customization:
+    customLogoFile:
+      key: nova-logo.png
+      name: console-custom-logo
+    customProductName: Nova Core | OpenShift Console
