@@ -7,4 +7,4 @@ spec:
     customLogoFile:
       key: nova-logo.png
       name: console-custom-logo
-    customProductName: Nova Core | OpenShift Console
+    customProductName: Nova Core ROSA Console
